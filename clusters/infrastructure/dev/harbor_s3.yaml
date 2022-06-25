@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: s3_credentials
+    name: s3credentials
     namespace: harbor
 type: Opaque
 stringData:
