@@ -1,0 +1,7 @@
+creation_rules:
+  - path_regex: '^.*/dev/.*/*.yaml$'
+    kms: arn:aws:kms:ap-northeast-2:046605939639:alias/fulfillment-dev-services-sops
+    aws_profile: fulfillment-dev
+  - path_regex: '^.*/staging/.*/*.yaml$'
+    kms: arn:aws:kms:ap-northeast-2:434987525062:alias/fulfillment-staging-aws-kms
+    aws_profile: fulfillment-staging

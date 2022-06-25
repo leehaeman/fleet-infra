@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: harbor
+    namespace: harbor
+type: Opaque
+stringData:
+    s3_accesskey: ENC[AES256_GCM,data:hQfPaEbxqLzLsWhP0lVlZCgimUQ=,iv:5IEkDi9R6ZLFNdVkzU29t2EpC8QbAyXZIpjccYlestc=,tag:jGjJCiJzbULO2LdZajH2cg==,type:str]
+    s3_secretkey: ENC[AES256_GCM,data:E4q4SYDqigM3kAuYVUsiVQsBHZokcaMDBxXy/5lhcnvXd9aF8Vb5kg==,iv:WIs3u2TgFuI84PbMigLFAQlj1P5ka9wZ6a8qoNCAFAc=,tag:bc1lx2f6qSDpAzDlJFAoAg==,type:str]
+sops:
+    kms:
+        - arn: arn:aws:kms:ap-northeast-2:046605939639:alias/fulfillment-dev-services-sops
+          created_at: "2022-06-25T01:44:21Z"
+          enc: AQICAHgDb2Ole6v3yiT6m1uYN9jbOGnjVrl4fQ17kGpz2/YGAwGJJz0ZJPfUO8mjNGpVJtG/AAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMdVFK3Fni6/NqBGDDAgEQgDsz41Rv2kB8jY2dIV+cTum5QUCGXC8LMwLX6uS6l2iUhMG5wAEH0e6dchSlUcE9cRNSKyqLie8HDa/oQg==
+          aws_profile: fulfillment-dev
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2022-06-25T01:44:22Z"
+    mac: ENC[AES256_GCM,data:2dsdaJvOfkajcNepa0LrHpKpFmBpB4IJY3GoFMb1TEwmRpE/l29Hxba1Qug1WI8K+2CQxkx2+NKmNuJEFjToPq+KJia3lA9cIYmnAHr6GSGVS+vB469Tsue+we8GdbkCG/vdkymGtJlReFdD7rG9YxSRvf/PMIU6zLH5j3g2L7w=,iv:Em3XVcIMgGcVJdOZkfOc3YRJ/0+x2B/Rsg8J/M7/hfo=,tag:komUjVCMgxwFwT3rKPty6A==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
