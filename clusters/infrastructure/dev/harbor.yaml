@@ -1,24 +1,24 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: harbor
+    name: s3_credentials
     namespace: harbor
 type: Opaque
 stringData:
-    s3_accesskey: ENC[AES256_GCM,data:hQfPaEbxqLzLsWhP0lVlZCgimUQ=,iv:5IEkDi9R6ZLFNdVkzU29t2EpC8QbAyXZIpjccYlestc=,tag:jGjJCiJzbULO2LdZajH2cg==,type:str]
-    s3_secretkey: ENC[AES256_GCM,data:E4q4SYDqigM3kAuYVUsiVQsBHZokcaMDBxXy/5lhcnvXd9aF8Vb5kg==,iv:WIs3u2TgFuI84PbMigLFAQlj1P5ka9wZ6a8qoNCAFAc=,tag:bc1lx2f6qSDpAzDlJFAoAg==,type:str]
+    accesskey: ENC[AES256_GCM,data:2uQFJWLyuwn+g4Td2ih0QYWWwas=,iv:jzDpHQ0J+bkERNcJisclcg33S8phBMMvOVjuDaKYRHM=,tag:+yIS1DV9wybGegsd2afDfQ==,type:str]
+    secretkey: ENC[AES256_GCM,data:sNE9JoTDb7UuromnagJaDYfS2HoJoNZzW5uJC4b1o34MLMOuQbyd/w==,iv:Exv8TUiQ8EvRV3W+WPEctDYdO9aqM/zzTpQAxw2vxzc=,tag:acnZ4m/6vh0ke+6d76p1IQ==,type:str]
 sops:
     kms:
         - arn: arn:aws:kms:ap-northeast-2:046605939639:alias/fulfillment-dev-services-sops
-          created_at: "2022-06-25T01:44:21Z"
-          enc: AQICAHgDb2Ole6v3yiT6m1uYN9jbOGnjVrl4fQ17kGpz2/YGAwGJJz0ZJPfUO8mjNGpVJtG/AAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMdVFK3Fni6/NqBGDDAgEQgDsz41Rv2kB8jY2dIV+cTum5QUCGXC8LMwLX6uS6l2iUhMG5wAEH0e6dchSlUcE9cRNSKyqLie8HDa/oQg==
+          created_at: "2022-06-25T11:02:33Z"
+          enc: AQICAHgDb2Ole6v3yiT6m1uYN9jbOGnjVrl4fQ17kGpz2/YGAwF5UJCokFnulDv/O0pSnCfIAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMnxiSI0MVhVubeGf+AgEQgDtWUHHx8yGiTsZa1nS4K6y8B94CcXmm2ND9gZ7okZBtQx9zPGxHFQ/5gKEjDXf0Mu1Q1C6Ae2GDVPaxRA==
           aws_profile: fulfillment-dev
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-06-25T01:44:22Z"
-    mac: ENC[AES256_GCM,data:2dsdaJvOfkajcNepa0LrHpKpFmBpB4IJY3GoFMb1TEwmRpE/l29Hxba1Qug1WI8K+2CQxkx2+NKmNuJEFjToPq+KJia3lA9cIYmnAHr6GSGVS+vB469Tsue+we8GdbkCG/vdkymGtJlReFdD7rG9YxSRvf/PMIU6zLH5j3g2L7w=,iv:Em3XVcIMgGcVJdOZkfOc3YRJ/0+x2B/Rsg8J/M7/hfo=,tag:komUjVCMgxwFwT3rKPty6A==,type:str]
+    lastmodified: "2022-06-25T11:02:34Z"
+    mac: ENC[AES256_GCM,data:nRrZWhM3T61lBbL9tnmUagWc9fYkLZpEx/Xfo2qcsGNa1YbHia6P7JS4fkpRY3HG/2GuzEPv/O1ClsMtRL2ZFC7kj9UU9yte+Cv/YQdJkVuMA1Im7s3akTnQrBkWXK7fTe8faaRzANshAzAq+q4pioorV9N2bzXGMU1ztwCozxo=,iv:1HhxYc7JaLa4i1lk1oASlEOZSuQTdvQI/+SkLLsjs2w=,tag:BCSEByapP4WTNlMcYaNCyA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData)$
     version: 3.7.3
